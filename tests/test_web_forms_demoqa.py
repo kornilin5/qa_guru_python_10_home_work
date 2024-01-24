@@ -1,5 +1,5 @@
 import pytest
-import os.pat
+import os.path
 from selene import browser, be, have
 
 
