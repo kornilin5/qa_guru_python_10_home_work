@@ -1,4 +1,5 @@
 import pytest
+import os.pat
 from selene import browser, be, have
 
 
@@ -20,9 +21,7 @@ def test_form():
             be.clickable).click()
     browser.element('#subjectsInput').type('English').press_enter()
     browser.element('[for="hobbies-checkbox-2"]').should(be.clickable).click()
-    browser.element('#uploadPicture').set_value(
-        r'C:\Users\PrizrakZero5\Desktop\Папки\python_test_qa_guru_demoqa\ZnugKfP5UJk.jpg'
-    )
+    browser.element('#uploadPicture.form-control-file').send_keys(os.path.abspath('ZnugKfP5UJk.png'))
     browser.element("#currentAddress").type("ТУТ АДРЕСС")
     browser.element('#state').click()
     browser.element('#react-select-3-option-2').should(be.clickable).click()
