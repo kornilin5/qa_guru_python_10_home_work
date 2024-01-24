@@ -10,4 +10,4 @@ def browser_open():
     
     yield
 
-    browser.close()
+    browser.quit()
