@@ -19,7 +19,7 @@ def test_form():
         '.react-datepicker__day.react-datepicker__day--017').should(
             be.clickable).click()
     browser.element('#subjectsInput').type('English').press_enter()
-    browser.element('[for="hobbies-checkbox-2"]').click()
+    browser.element('[for="hobbies-checkbox-2"]').should(be.clickable).click()
     browser.element('#uploadPicture').set_value(
         r'C:\Users\PrizrakZero5\Desktop\Папки\python_test_qa_guru_demoqa\ZnugKfP5UJk.jpg'
     )
@@ -28,7 +28,7 @@ def test_form():
     browser.element('#react-select-3-option-2').should(be.clickable).click()
     browser.element('#city').click()
     browser.element('#react-select-4-option-1').should(be.clickable).click()
-    browser.element('#submit').press_enter()
+    browser.element('#submit').should(be.clickable).click()
     
     #С этого места мы проверяем правильность заполненных данных
     browser.element('.table').all('td:nth-child(2)').should(
